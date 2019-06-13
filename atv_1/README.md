@@ -1,11 +1,16 @@
 # 1
 
-O que esse programa  faz? Qual é a entrada? Qual é o resultado (saída)? Encontrou algum erro? Se encontrou, conserte-o! Qual a complexidade assintótica de pior caso (tempo e espaço)? Cite duas  características  quedefinem  esse  código  como  de paradigma de  programação imperativo?Justifique  suasrespostas.
-A entrada é o arquivo vetor.txt
+## O que esse programa  faz? 
 
 ---
+## Qual é a entrada? 
+A entrada é o arquivo vetor.txt
+
 arq = fopen("vetor.txt","r");
 
+
+---
+## Qual é o resultado (saída)? 
 A saída é
 o print de cada número com o vetor de forma decimal
 ```
@@ -33,12 +38,16 @@ Chave de maior valor = 100
 
 
 ---
+## Encontrou algum erro? Se encontrou, conserte-o!
 
-
+---
+## Qual a complexidade assintótica de pior caso (tempo e espaço)?
 
 complexidade assintótica: O(n)
 
 ---
+## Cite duas  características  quedefinem  esse  código  como  de paradigma de  programação imperativo?Justifique  suas respostas.
+
 Alguns elementos da programação imperativa presentes no código são:
 
 Definição de tipos de dados
@@ -99,7 +108,12 @@ Chave de menor valor = 0
 ```
 
 ---
-## Qual a complexidade assintótica de pior caso (tempo e espaço)? Cite três características  quedefinem  esse  código  como  de paradigma de  programação imperativo?
+## Qual a complexidade assintótica de pior caso (tempo e espaço)?
+
+O(n²)
+
+---
+## Cite três características  quedefinem  esse  código  como  de paradigma de  programação imperativo?
 
 
 
