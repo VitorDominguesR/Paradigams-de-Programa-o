@@ -115,7 +115,15 @@ O(n²)
 ---
 ## Cite três características  quedefinem  esse  código  como  de paradigma de  programação imperativo?
 
-
+Ele utiliza variaveis, executa os procedimentos sequencialmente e utiliza comando de atribuição e repetição para leitura dos valores e execução de tarefas
 
 ---
-## Qual a  diferença de propósito entre  este  programa  e  aquele  da  questão  anterior?  O  que  foi  modificado nocódigo(estruturas  de  dados, comandos, etc.?)para ter-se o novopropósito? Justifique suasrespostas. 
+## Qual a  diferença de propósito entre  este  programa  e  aquele  da  questão  anterior?  O  que  foi  modificado no código(estruturas  de  dados, comandos, etc.?)para ter-se o novo propósito? Justifique suas respostas. 
+
+No primeiro, ele possui uma função chamada Max que armazenava o primeiro número do vetor e verificava se os próximos eram maiores ou não, se fossem ele era colocado na váriavel Temp, se não ele continuava para o próximo item e no final ele retirnava o valor utilizado na variavel Temp
+
+No segundo caso a primeira modificação mais notável foi o uso de ponteiros indicando as regios de memória para as variaveis Min e Max. Nesse caso o nome da função também foi alterado para MinMax3.
+
+No começo da função confesso que não entendi muito bem o pq ele fazia, então fui pesquisar e vi que ele faz um "bitwise and" para verificar se o tamanho do vetor é adequado a quantidade de número do arquivo vertor.txt, caso fosse maior, ele replicava o último numero para a ultima posição que provavelmente só teria um valor aleatório e dentro do espaço de memória alocado e interferiria no resultado.
+
+Passando isso, ele executa a instrução while para percorrer o vetor e caso o número anterior da possição atual do vetor for maior que o da posição atual ele verifica se é maior ou menor que o mínimo já alocado nos ponteiros.
