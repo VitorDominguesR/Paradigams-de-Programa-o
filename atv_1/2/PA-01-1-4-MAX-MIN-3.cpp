@@ -10,18 +10,14 @@ int i, Max, Min;
 void MaxMin3(TipoVetor A, int * Max, int * Min) {
   int i, FimDoAnel;
   printf("%d",((N & 1) > 0));
-  if ((N & 1) > 0) {
-  	printf("%B",(N & 1));
-    A[N] = A[N - 1];
-    FimDoAnel = N;
-  } else FimDoAnel = N - 1;
+  FimDoAnel = N - 1;
   printf("%d", FimDoAnel);
   if (A[0] > A[1]) {
     * Max = A[0];* Min = A[1];
   } else {
     * Max = A[1];* Min = A[0];
   }
-  i = 3;
+  i = 0;
   while (i <= FimDoAnel) {
     if (A[i - 1] > A[i]) {
       if (A[i - 1] > * Max) * Max = A[i - 1];

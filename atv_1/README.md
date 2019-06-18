@@ -127,3 +127,99 @@ No segundo caso a primeira modificação mais notável foi o uso de ponteiros in
 No começo da função confesso que não entendi muito bem o pq ele fazia, então fui pesquisar e vi que ele faz um "bitwise and" para verificar se o tamanho do vetor é adequado a quantidade de número do arquivo vertor.txt, caso fosse maior, ele replicava o último numero para a ultima posição que provavelmente só teria um valor aleatório e dentro do espaço de memória alocado e interferiria no resultado.
 
 Passando isso, ele executa a instrução while para percorrer o vetor e caso o número anterior da possição atual do vetor for maior que o da posição atual ele verifica se é maior ou menor que o mínimo já alocado nos ponteiros.
+
+Duas coisas que não entendi foi o laço while começando em i=3 e o bitwise no começo
+
+---
+
+# 3
+
+*Estude e analise o código.* Compile e execute. 
+
+---
+## O que esse programa faz? 
+
+Ordena os valores contidos no arquivo vetor.txt
+
+---
+## Qual é a entrada? 
+
+os valores dentro do arquivo vetor.txt
+
+---
+
+## Qual é o resultado (saída)? Encontrou algum erro? Se encontrou, conserte-o! 
+
+Saída
+
+```
+Vetor a ser pesquisado:
+
+50
+30
+0
+40
+21
+99
+100
+2
+9
+65
+
+Vetor ordenado: 0 2 9 21 30 40 50 65 99 100
+```
+
+---
+## Qual a complexidade assintótica de pior caso (tempo e espaço)?
+
+O(n²)
+
+---
+## Cite três características  quedefinem  esse  código  como  de paradigma de  programação imperativo?
+
+Ele utiliza variaveis, executa os procedimentos sequencialmente e utiliza comando de atribuição e repetição para leitura dos valores e execução de tarefas
+
+---
+## Considerando o propósito identificado por você, seria possível realiza-lo de forma mais eficiente (i.e., menor complexidade)? Em caso positivo, reescreva esse código da forma mais eficiente imaginada por você. Essa nova forma ainda se conforma ao paradigma de programação imperativo?
+
+Dado o propósito de ordenação de um vetor com entradas aleatórias do ponto de vista de ordem, pesquisando achei o algoritimo quicksort que foi implementado com o código a seguir
+
+```
+void Ordena(int * a, int left, int right)
+{ /*ordena o vetor A em ordem ascendente*/
+  int i, j, x, y;
+    
+    /* Inicio vetor*/
+    i = left;
+    /* final do vetor */
+    j = right;
+    /*pivot */
+    x = a[(left + right) / 2];
+     
+    while(i <= j) {/*enquanto eu não chegar no pivot (x) */
+      /*verifico se numeros a esquerda maiores que o pivo e da direita menores que o pivot */
+        while(a[i] < x && i < right) {
+            i++;
+        }
+        while(a[j] > x && j > left) {
+            j--;
+        }
+        /*Faço a troca de valores entre a[i] que é maior que o pivot e a[j] que é menor que o pivot*/
+        if(i <= j) {
+            y = a[i];
+            a[i] = a[j];
+            a[j] = y;
+            i++;
+            j--;
+        }
+    }
+     /* Aqui ocorre a divisão em subvetores para ordenação das partes restantes  */
+    if(j > left) {
+        Ordena(a, left, j);
+    }
+    if(i < right) {
+        Ordena(a, i, right);
+    }
+} 
+```
+Essa nova forma não segue totalmente a forma imperativa, pois também recorre a recursão, caracteristica da linguagem funcional
