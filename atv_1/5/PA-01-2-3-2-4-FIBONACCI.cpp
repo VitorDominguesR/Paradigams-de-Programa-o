@@ -9,13 +9,14 @@ unsigned int FibIter(unsigned int n)
 }
 
 unsigned int  FibRec(unsigned int n)
-{ if (n < 2)
-  return n;
+{ 
+  if (n < 2) return n;
   else return (FibRec(n - 1) + FibRec(n - 2));
 }
 
 int main(int argc, char *argv[])
-{ printf("%5d\n", FibIter(10));
-  printf("%5d\n", FibRec(10));
+{ 
+  printf("%d\n", FibIter(5));
+  printf("%d\n", FibRec(5));
   return(0);
 }

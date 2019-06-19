@@ -223,3 +223,103 @@ void Ordena(int * a, int left, int right)
 } 
 ```
 Essa nova forma não segue totalmente a forma imperativa, pois também recorre a recursão, caracteristica da linguagem funcional
+
+---
+
+# 4
+
+*Estude e analise o código.* Compile e execute. 
+
+---
+## O que esse programa faz? 
+
+Soma uma unidade dado inteiros passados para a função SomaUm.
+A diferença é que o valor a é passado como uma variavel e o valor b como um ponteiro.
+Como b é um ponteiro, o valor inserido no espaço de memoria passado é alterado, enquanto o valor da variavel a não se altera
+
+---
+## Qual é a entrada? 
+
+2 inteiros, a e b, iguais a 0
+---
+
+## Qual é o resultado (saída)? Encontrou algum erro? Se encontrou, conserte-o! 
+
+Saída
+
+```
+Funcao SomaUm: 1 1
+Programa principal: 0 1
+```
+
+---
+## Qual a complexidade assintótica de pior caso (tempo e espaço)?
+
+O(n)
+
+---
+## Cite três características  quedefinem  esse  código  como  de paradigma de  programação imperativo?
+
+Ele utiliza variaveis, executa os procedimentos sequencialmente e utiliza comando de atribuição e repetição para leitura dos valores e execução de tarefas
+
+---
+## Você  deve ter percebido que são usados dois modos distintos para realizar a passagem de parâmetros, quala diferença entre esses dois modos  e  quais  as  vantagens  e  desvantagens  de  cada  um ?
+
+Dada a principal diferença que o valor inserido na váriavel permanece até que seja atribuido um novo valor dentro do escopo que ela está e um ponteiro que qualquer alteração no endereço de memória utilizado reflete nos demais lugares os quais esse endereço é referenciado.
+
+Os valores após a utilização de ponteiros permanecem, o gerenciamento da memória dado o uso fica a cargo do programador e fácilita o erro para vazemento ou corrupção de memória, dado que você pode acidentalmente estourar o tamanho do espaço alocado
+
+---
+##  Esses  dois  modos  se  aplicam  igualmente  aosdistintosparadigmas de projetode algoritmos?
+
+Ponteiros não são caracteristigas de programação orientada a objeto.
+
+No caso de POO podemos passar parametros para objetos, mas não referencias de memória.
+
+---
+
+# 5
+
+*Estude e analise o código.* Compile e execute. 
+
+---
+## O que esse programa faz? 
+
+da a saida da soma do número de elemento da sequencia de fibonacci determinado passado como parametro
+---
+## Qual é a entrada? 
+
+um inteiro para cada função
+---
+
+## Qual é o resultado (saída)? Encontrou algum erro? Se encontrou, conserte-o! 
+
+Saída
+
+```
+Funcao SomaUm: 1 1
+Programa principal: 0 1
+```
+
+---
+## Qual a complexidade assintótica de pior caso (tempo e espaço)?
+
+O(n)
+
+---
+## Cite três características  quedefinem  esse  código  como  de paradigma de  programação imperativo?
+
+Ele utiliza variaveis, executa os procedimentos sequencialmente e utiliza comando de atribuição e repetição para leitura dos valores e execução de tarefas
+
+---
+## Você  deve ter percebido que são usados dois modos distintos para realizar a passagem de parâmetros, quala diferença entre esses dois modos  e  quais  as  vantagens  e  desvantagens  de  cada  um ?
+
+A recursividade pode ser util em funções que podem ser descritas em termos da própria função e define conjuntos infinitos com comandos finitos.
+
+Normalmente ela é util para algoritimos complexos, cuja implementação iterativa é complexa e requer o uso de pilha
+
+Procedimentos recursivos introduzem a possibilidade de iterações quepodem não terminar: existe a necessidade de considerar o problemadeterminação.
+
+---
+##  Esses  dois  modos  se  aplicam  igualmente  aos distintos paradigmas de projeto de algoritmos?
+
